@@ -22,9 +22,13 @@ a {
   color: #00749a;
 }
 
+p {
+  text-align: center;
+}
+
 .content {
-  max-width: 600px;
-  margin: 3rem  auto;
+  max-width: 80%;
+  margin: 1rem  auto;
   padding: 1rem;
   background-color: #fff;
   -moz-box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.3);
@@ -36,6 +40,7 @@ a {
   font-size: 2rem;
   color: #424242;
   text-align: center;
+  font-family: Montserrat, "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .title > span {
@@ -43,7 +48,16 @@ a {
 }
 
 .img-logo{
-  max-width: 100%;
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+
+@media (max-width : 960px) {
+  .img-logo {
+    width: 100%;
+  }
+
 }
 
 .text-default{
@@ -85,16 +99,18 @@ input[type="text"] {
   color: #666;
   padding: .5rem;
   font-size: 1rem;
-  width: 100%;
+  width: 50%;
   height: 40px;
   outline: 0;
-  display: inline-block;
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 
 input[type="submit"],
 form .forum {
-  padding: .5rem;
-  margin: 1.5rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
   font-size: 1rem;
   cursor: pointer;
   width: 40%;
@@ -109,7 +125,6 @@ form .forum {
 @media screen and (max-width: 600px) {
   input[type="submit"],
   form .forum {
-    margin: 1rem 0;
     width: 100%;
   }
 }
@@ -117,10 +132,32 @@ form .forum {
 input[type="submit"] {
   border: 1px solid #ebccd1;
   background-color: #f2dede;
-  color: #a94442;
+  color: #982422;
+  display: inline-block;
+  width: 50%;
+  margin-left: 0;
+  font-weight: bold;
+  transition: background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
+  font-family: Montserrat, "Lucida Grande", Helvetica, Arial, sans-serif;
+  border-radius: 2%;
 }
 form .forum {
   border: 1px solid #bce8f1;
   background-color: #d9edf7;
-  color: #31708f;
+  color: #1b6a91;
+  display: inline-block;
+  width: 50%;
+  margin-right: 0;
+  font-weight: bold;
+  transition: background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
+  font-family: Montserrat, "Lucida Grande", Helvetica, Arial, sans-serif;
+  border-radius: 2%;
+}
+
+form .forum:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
